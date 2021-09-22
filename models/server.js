@@ -22,7 +22,7 @@ class Server {
 
         this.io = socketio(this.server, {
             cors:{
-                origin:"http://localhost:4200",
+                origin:"",
             }
         });
 
