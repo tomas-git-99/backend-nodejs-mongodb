@@ -16,6 +16,7 @@ const SocketClient = async( socket = new Socket(), io ) =>{
 
         
         const dato =  await verificarSala(idSala, token);
+        
 
         if(dato.ok == false) {
             socket.emit('salir-sala', dato);
@@ -23,6 +24,9 @@ const SocketClient = async( socket = new Socket(), io ) =>{
         }
         const { sala:{id:idSalas, creado_por_ID, invitado_ID} } = dato;
 
+        
+   
+        
         
         const datos = {
             
