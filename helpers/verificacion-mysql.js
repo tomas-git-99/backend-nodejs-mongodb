@@ -6,7 +6,7 @@ const verificarSala = async (id, token) =>{
 
 
     try {
-        const dato = await fetch(`http://localhost:5050/api/sala/${id}`,{
+        const dato = await fetch(`${process.env.DATAMYSQL}sala/${id}`,{
              method:'GET',
              body: JSON.stringify(),
              headers: {'Content-Type': 'application/json','x-token': token}},
